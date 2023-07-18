@@ -16,7 +16,7 @@ public class JdbcExample {
     private static void getTotalCount() throws ClassNotFoundException,SQLException
     {
         Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
+        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Admin");
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM APP_CUSTOMER");
 
@@ -28,7 +28,7 @@ public class JdbcExample {
     }
     private static void fetchAllRecords() throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
+        Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "Admin");
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT * FROM APP_CUSTOMER");
 
