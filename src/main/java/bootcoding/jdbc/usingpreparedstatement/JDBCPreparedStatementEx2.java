@@ -1,4 +1,4 @@
-package bootcoding.jdbc;
+package bootcoding.jdbc.usingpreparedstatement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

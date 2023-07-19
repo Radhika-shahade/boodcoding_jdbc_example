@@ -1,9 +1,8 @@
-package bootcoding.jdbc;
+package bootcoding.jdbc.usingpreparedstatement;
 
 import java.sql.*;
-import java.util.Random;
 
-public class JDBCPrepareInsertExample {
+public class JDBCPrepareInsertExample1 {
     public static void main(String[] args) {
 
         Connection connection=null;
