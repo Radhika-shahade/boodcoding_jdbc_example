@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Random;
 
-public class JDBCPreparedStatementEx2 {
+public class JDBCPreparedStatementInsertEx2 {
     public static void main(String[] args) {
         Connection connection= null;
         PreparedStatement ps=null;
