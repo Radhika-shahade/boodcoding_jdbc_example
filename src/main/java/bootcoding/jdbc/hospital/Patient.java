@@ -12,7 +12,7 @@ public class Patient {
     int mobile_number;
     String email_id;
  Date admission_date;
- Date discharge_date;
+Date discharge_date;
 
     public Date getAdmission_date() {
         return admission_date;
