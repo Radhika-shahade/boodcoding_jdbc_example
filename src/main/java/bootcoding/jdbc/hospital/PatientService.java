@@ -1,5 +1,7 @@
 package bootcoding.jdbc.hospital;
 
+import util.RandomDateGenerator;
+
 import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -9,6 +11,7 @@ public class PatientService {
 
     public List<Patient> buildRecord(int size)
     {
+        RandomDateGenerator previousDate = new RandomDateGenerator();
         List<Patient>patients= new ArrayList<>();
         for(int i=0;i<size;i++)
         {
@@ -19,9 +22,9 @@ public class PatientService {
             patient.setCity(getCityName());
             patient.setMobile_number(getMobileNumber());
             patient.setEmail_id(getEmailId(getName()));
-//            patient.setIs_cure(getis_cure());
-//            patient.setAdmission_date(generateRandomDate());
-//            patient.setDischarge_date(generateRandomDate());
+            patient.setAdmission_date(previousDate.getDate());
+            patient.setDischarge_date(previousDate.getDate());
+            patient.setIs_cure(getis_cure());
             patients.add(patient);
 
         }
