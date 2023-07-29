@@ -17,4 +17,9 @@ public  Date getDate()
         return yesterday;
 
     }
+
+    public static void main(String[] args) {
+        RandomDateGenerator rd= new RandomDateGenerator();
+        System.out.println(rd.getDate());
+    }
 }
