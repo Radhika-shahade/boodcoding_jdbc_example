@@ -10,9 +10,9 @@ public class FetchData3 {
         try {
             Class.forName("org.postgresql.Driver");
             connection= DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","Admin");
-            psmt=connection.prepareStatement("select  * from hospitaldb h where Admission_Date = ? ");
-            psmt.setDate(1,);
-            ResultSet rs   =psmt.executeQuery();
+            psmt=connection.prepareStatement("select  * from hospitaldb h where (Discharge_Date) = '2022-04-13' ");
+//            psmt.setDate(1,);
+            ResultSet rs = psmt.executeQuery();
             while(rs.next())
             {
                 System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3) + " "
